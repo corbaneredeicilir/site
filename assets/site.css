@@ -313,3 +313,6 @@ section.band[style]{padding-top:clamp(28px,5vw,56px)!important}
   ::view-transition-old(root),::view-transition-new(root){animation-duration:.22s}
 }
 @media print{.top,.ticker,.hero::after,.phead::after,.rbar{display:none}}
+
+.gl{margin:10px 0 0;font-size:.92rem;font-weight:600}
+.gl a{text-underline-offset:3px}
