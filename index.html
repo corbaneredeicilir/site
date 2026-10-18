@@ -220,7 +220,7 @@ function card(v){
   return '<article class="venue">'+
     '<div>'+(v.owner?'<span class="badge">Öne çıkan</span>':'')+
       '<h3><a class="vl" href="'+(v.link?esc(v.link)+'" target="_blank" rel="noopener':'/mekan/'+esc(v.slug)+'/')+'">'+esc(v.name)+'</a></h3><p class="where">'+esc(v.semt)+'<br>'+esc(v.addr)+'</p></div>'+
-    '<div><ul class="soups">'+soups+'</ul><p class="vnote">'+esc(v.note)+'</p><p class="gl"><a href="https://www.google.com/maps/search/?api=1&amp;query='+encodeURIComponent(v.name+' '+v.semt.replace(/[()]/g,' ').replace(/\s+/g,' ').trim()+' İstanbul')+'" target="_blank" rel="noopener">Google’da puan ve yorumlar ↗</a></p></div>'+
+    '<div><ul class="soups">'+soups+'</ul><p class="vnote">'+esc(v.note)+'</p><p class="gl"><a href="https://www.google.com/maps/search/?api=1&amp;query='+encodeURIComponent(v.name+' '+v.semt.replace(/[()]/g,' ').replace(/\s+/g,' ').trim()+' İstanbul')+'" target="_blank" rel="noopener">Google’da puan ve yorumlar ↗</a>'+(v.owner?' · <a href="/mekan/deniz-lokantasi/">Lokanta sayfası</a>':'')+'</p></div>'+
     '<div><span class="pill '+(v.h==='24'?'h24':(v.h==='unk'?'unk':''))+'">'+HL[v.h]+'</span>'+
       '<p class="hnote">'+esc(v.hnote)+'</p><p class="check">'+esc(check)+'</p>'+
       '<ul class="srcs">'+srcs+'</ul></div>'+

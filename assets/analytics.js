@@ -50,6 +50,7 @@
     if(nav){var a=document.createElement('a');a.href='#cerez-tercihleri';a.textContent='Çerez tercihleri';a.addEventListener('click',function(e){e.preventDefault();show()});nav.appendChild(a)}
     if(get()!=='granted'&&get()!=='denied')show();
   }
+  document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="google.com/maps"]');if(!a||!loaded)return;var h=a.getAttribute('href')||'';var d=false;try{d=/Deniz/.test(decodeURIComponent(h))}catch(x){}gtag('event',(d&&h.indexOf('maps/dir')>-1)?'deniz_yol_tarifi':'harita_baglantisi',{sayfa:location.pathname,transport_type:'beacon'})});
   if(get()==='granted')load();
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',ready);else ready();
 })();
